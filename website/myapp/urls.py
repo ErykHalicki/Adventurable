@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import index
+from . import views
 
 urlpatterns = [
-    path('', index, name='index'),
+    path('submit/', views.submit_form, name='submit_form'),
+    path('', views.main_page, name='main_page'),
+    path('planner', views.planner, name='planner'),
 ]

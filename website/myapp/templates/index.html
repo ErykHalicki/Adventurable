@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <style>
         @font-face {
             font-family: 'Lamarkie';
-            src: url('Lamarkie.otf') format('opentype');
+            src: url({% static 'Lamarkie.otf' %}) format('opentype');
             font-weight: normal;
             font-style: normal;
         }

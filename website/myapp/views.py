@@ -1,9 +1,20 @@
 from django.shortcuts import render
+from django.http import JsonResponse
+from .models import UserResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
 
-# Create your views here.
-from django.shortcuts import render
-from .models import Item
+@csrf_exempt
+def submit_form(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        print(data['name'])
+        print(data['age'])
+        return JsonResponse({'status': 'success'})
+    return JsonResponse({'status': 'error'})
 
-def index(request):
-    items = Item.objects.all()
-    return render(request, 'index.html', {'items': items})
+def main_page(request):
+    return render(request,'index.html')
+def planner(request):
+    return render(request,'planner.html')
+
