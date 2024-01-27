@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2Adventure Planner2</title>
-    
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-
+    <link rel="stylesheet" type="text/css" href={% static 'styles.css' %}>
 </head>
 
 <body>
@@ -32,18 +30,18 @@
             </div>
         </div>
         <div style="text-align: center;">
-            <a href="planner" class="start-plan-button">Start Plan</a>
+            <a href="#" class="start-plan-button">Start Plan</a>
         </div>
     </section>
   <section>
         <h2>About Us</h2>
         <div class="about-boxes">
             <div class="about-box">
-                <img src="path-to-amanda-photo.jpg" alt="Amanda Photo">
+                <img src={% static 'ming.jpg' %} alt="Amanda Photo">
                 <p>Hey! I'm Amanda, a first-year UBCO microbiology student teaming up with Eryk to learn more about programming, develop new skills, and bring a fun artistic touch to our project!</p>
             </div>
             <div class="about-box">
-                <img src="path-to-eryk-photo.jpg" alt="Eryk Photo">
+                <img src="{% static 'eryk.jpg' %}" alt="Eryk Photo">
                 <p>Box 2 Content</p>
             </div>
         </div>
