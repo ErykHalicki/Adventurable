@@ -1,6 +1,9 @@
 
 function submitForm() {
     // Collect all input values dynamically
+    var locationContainer = document.getElementById('location-container');
+            locationContainer.innerHTML = '';  // Clear existing content
+
     var formData = {};
     var inputs = document.querySelectorAll('input, select');
     inputs.forEach(function(input) {
@@ -25,7 +28,9 @@ function submitForm() {
     })
     .then(response => response.json())
     .then(locations => updateContent(locations))
-    .catch(error => console.error('Error fetching data:', error));
+    .then(result => {sessionStorage.setItem('user', JSON.stringify(formData));
+})
+            .catch(error => console.error('Error fetching data:', error));
     }
     else{
         document.getElementById('location').placeholder="Please Enter Location!";
@@ -80,30 +85,42 @@ function showAccessibilityInput() {
             }
         }
 
-async function addInfo(request,location, elementType,parent,before){
+let usr;
+function inBefore(parent, elem,childParent){
+    parent.insertBefore(elem, childParent);
+}
+async function addInfo(request,location, elementType,parent,before,useBefore){
     fetch('/info/', {
         method: 'POST',
         headers: {
             'Content-Type': 'text',
         },
-        body: request+" "+location.name+" "+location.area,
+        body: "User Data to take into account: "+usr+" Request: "+request+" "+location.name+" "+location.area,
     })
     .then(response => response.json())
             
     .then(result => {
         var elem=document.createElement(elementType);
         elem.textContent=result.result;
-        if(before==true){
-            parent.insertBefore(elem, parent.FirstChild);
+        parent.appendChild(elem);
+        if(useBefore==true){
+            parent.insertBefore(elem, before);
+            console.log(parent.firstChild);
         }
-        else {
-        parent.insertBefore(elem, parent.LastChild.nextSibling);
-    }
+        return elem;
     })
+}
+
+function addHeader(request,parent){
+    var h3 = document.createElement('h3');
+    h3.textContent = request;
+    parent.appendChild(h3);
+    return h3;
 }
 window.onload = function() {
     if(window.location.href.includes("results")){
         const locations = JSON.parse(sessionStorage.getItem('locations'));
+        usr = sessionStorage.getItem('user');
         console.log("got data!");
         var locationContainer = document.getElementById('location-container');
             locationContainer.innerHTML = '';  // Clear existing content
@@ -123,10 +140,27 @@ window.onload = function() {
                     subRectangle.appendChild(m);
                     result_col.appendChild(subRectangle);
                     locationContainer.appendChild(result_col);
-                    addInfo(" describe in 3 words, ", location, "h1",result_col);
-                    addInfo(" describe in 2 sentences, ", location, "g",result_col);
-                    /*result_col.appendChild(h2);*/
+                    addInfo(" describe in 3 words, ", location, "h3",result_col,result_col.firstChild,true);
+                    addHeader("About",result_col);
+                    
+                    var x=addHeader("Best Visiting Time",result_col);
+                    addInfo(" Generate a short, comprehensive, and user-friendly max 2 sentences description for , ", location, "g",result_col,x,true);
+                    
+                    var z=addHeader("Activities",result_col);
+                    addInfo("keep your whole answer 3 sentences MAX. Recommend the best time of year to visit for ", location, "g",result_col,z,true);
+                    var hz=addHeader("Safety / Tips",result_col);
+                    addInfo("keep your whole answer 3 sentences MAX. List 1-3 must-try activities for ", location, "g",result_col,hz,true);
+                    var hl=addHeader("Itinerary",result_col);
+                    addInfo("Provide some tips/information to be prepared for each activity at [Desired Location]. keep your whole answer 3 sentences MAX. Location: ", location, "g",result_col,hl,true);
+
+                    addInfo("Considering the users previous accessibility requirements and preferences, create a very summarized itinerary for an adventure here. Make sure to be very considerate of individuals disabilities or preferences. keep your whole answer 3 sentences MAX. Location:  ", location, "g",result_col,parent.lastChild,false);
+
+                    /*Recommend the best time of year to visit for*/
+                    /*
+                    addInfo("", location, "g",result_col,false);
+                    */
             }
+
         }
     }
 };

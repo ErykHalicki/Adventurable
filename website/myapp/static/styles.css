@@ -56,9 +56,9 @@ h2 {
 }
 
 h3 {
-    color: #fff;
+    color#457a4a;
     align-items: center;
-    font-size: 28px; /* Adjust font size as needed */
+    font-size: 21px; /* Adjust font size as needed */
     font-weight: bold; /* Make the font bold */
 }
 h4 {
@@ -258,7 +258,7 @@ footer {
     flex: 0 0 calc(50% - 20px);
     border-radius: 10px;
     overflow-y: auto; /* Add vertical scroll if content overflows */
-    max-height: 450px; /* Set a maximum height for the right column */
+    /*max-height: 450px; /* Set a maximum height for the right column */
 }
 .sub-rectangle {
     margin: 10px;
@@ -315,7 +315,7 @@ footer {
 
 .result-column {
     float: left;
-    width: 30%; /* Adjust the width as needed */
+    width: 33%; /* Adjust the width as needed */
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     /*max-height: 450px;*/
@@ -323,8 +323,12 @@ footer {
 
     padding: 20px; /* Add padding for spacing on the sides */
     margin: 0 10px; /* Add margin for spacing between columns */
+    color:#457a4a;
+        line-height: 0.7;
 }
-<style>
+.result-column g{
+
+}
     .about-box {
         text-align: center; /* Center-align the text within the about-box */
     }

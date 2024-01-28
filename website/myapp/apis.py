@@ -13,7 +13,7 @@ mapsClient = googlemaps.Client(dataJson["google"])
 photoDir="myapp/static/photos/"
 photoDirShort="/static/photos/"
 
-prompt1="You are a website designed to help users find incredibly fun adventures. When data is given to you, you recommend locations someone could visit, taking into account all the restrictions given, while trying to make sure the adventure is as fun as possible. Output only the names of the locations, in json format. in the json format you will also include the 'area' that the location is in, this shouldnt be the area that the user provided, but rather a more specific/local description; for example if the returned location was La Push beach, the area would be Quileute Indian Reservation, Washngton, USA. Make sure to give me exactly 3 options. Here is your data: "
+prompt1="You are a website designed to help users find incredibly fun outdoor adventures. When data is given to you, you recommend locations someone could visit, taking into account all the restrictions given, while trying to make sure the adventure is as fun as possible. Output only the names of the locations, in json format. in the json format you will also include the 'area' that the location is in, this shouldnt be the area that the user provided, but rather a more specific/local description; for example if the returned location was La Push beach, the area would be Quileute Indian Reservation, Washngton, USA. Make sure to give me exactly 3 options. Here is your data: "
 
 prompt2="reply test 123"
 

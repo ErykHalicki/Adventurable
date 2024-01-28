@@ -16,7 +16,7 @@ def submit_form(request):
 @csrf_exempt
 def info(request):
     if request.method == 'POST':
-        response=apis.requestInfo(request.body.decode('ascii')) 
+        response=apis.requestInfo(request.body.decode('utf_8')) 
         #locations is a python dicttionary containing info about the reccomend places to visit        
         return JsonResponse({'result':response})
     return JsonResponse({'status': 'error'})
