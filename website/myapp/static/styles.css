@@ -218,6 +218,24 @@ footer {
 .sub-rectangle.sub-rectangle-3 {
     background-image: url('https://www.travel-british-columbia.com/wp-content/uploads/2018/05/Silver-Star-Mountain-Resort-Vernon-Photo-Destination-BC-Blake-Jorgensen.jpg'); /* Replace 'path-to-image-3.jpg' with the actual path to your third image */
 }
+.proceed-button {
+    display: block;
+    margin: 20px auto; /* Center the button */
+    padding: 10px 20px;
+    background-color: #457a4a;
+    color: #fff;
+    font-family: 'Lamarkie', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.proceed-button:hover {
+    background-color: #356037;
+}
+
 .container {
     position: relative;
     background-color: rgba(0, 0, 0, 0.3);
