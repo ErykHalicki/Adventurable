@@ -49,7 +49,6 @@ section {
 .questions{
     flex: 1;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -144,4 +143,41 @@ footer {
     .question-column {
         width: 100%; /* On small screens, let each column take the full width */
     }
+}
+
+/* styles.css */
+/* ... (existing styles) ... */
+
+.question-text-box {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* styles.css */
+/* ... (existing styles) ... */
+
+.question-input {
+    width: 100%; /* Make input fields fill the width of their container */
+    padding: 10px; /* Add padding for better appearance */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-top: 5px; /* Add margin between input fields */
+    background-color: rgba(255, 255, 255, 0.7); /* Light white background */
+    border: 1px solid #ccc; /* Add a border for clarity */
+    border-radius: 5px; /* Add rounded corners */
+}
+.right-box {
+    flex: 0 0 calc(50% - 20px); /* Adjust the width as needed */
+    margin: 10px; /* Add margin to create space between the right box and questions */
+    padding: 20px; /* Increase padding for a larger box */
+    background-color: rgba(255, 255, 255, 0.7); /* Mostly clear white background */
+    border-radius: 10px; /* Adjust the border-radius for rounded corners */
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    color: #333; /* Text color inside the right box */
+    width: 50%; /* Use only half of the container's width */
+    transform: translateX(100%);
+    top: 0;
+}
+.container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
 }
