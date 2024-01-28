@@ -167,6 +167,22 @@ m {
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
+.about-boxes-1 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    width:80%;
+}
+
+.about-box-1 {
+    flex: 0 0 calc(50% - 20px); /* Adjust the width as needed (33.33% for three boxes) */
+    margin: 10px; /* Add margin to create space between boxes */
+    padding: 20px; /* Increase padding for a larger box */
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px; /* Adjust the border-radius for rounded corners */
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
 
 .start-plan-button {
     margin-top: 20px;
@@ -348,6 +364,22 @@ footer {
         height: auto; /* Maintain aspect ratio */
         border-radius: 5%; /* Optionally, add a border-radius for a rectangular image */
     }
+    .logo-photo {
+        margin-top: 10px; /* Adjust the top margin to center the photo vertically */
+        text-align: center; /* Center-align the photo horizontally */
+    }
+
+    .logo-photo img {
+       /* Set the width of the image */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5%; /* Optionally, add a border-radius for a rectangular image */
+    }
+.openai{
+    width:133px;
+}
+.maps{
+ width: 200px; 
+}
 .buffering-container {
             display: flex;
             justify-content: center;
