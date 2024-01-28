@@ -47,13 +47,14 @@ def createLocationList(request):
     json_match = re.search(r'\[.*\]', gptResponse, re.DOTALL)
     if json_match:
         json_data = json.loads(json_match.group(0))
-        
         for location in json_data:
             googleResponse=getGoogleLocation(location["name"])
             locations[googleResponse["place_id"]]={
                                                     "name":googleResponse["name"],
-                                                    "location":location["area"]
+                                                    "area":location["area"],
+                                                    "image_url":photoDir+googleResponse["place_id"]
                                                     }
     else:
         print("No JSON data found.")
+    print("returned all locations")
     return locations

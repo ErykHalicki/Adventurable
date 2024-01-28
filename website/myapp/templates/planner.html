@@ -68,43 +68,31 @@
                         </select>
                         <input type="text" id="accessibilityDescription" class="question-input" style="display: none;" placeholder="Specify requirements">                    </div>
                     <div class="text-box question-text-box">
-                        <label for="dietRestriction">Do you have any dietary restrictions?</label>
-                        <select id="dietRestriction" class="question-input" required>
-                            <option value="None">None</option>
-                            <option value="Vegetarian">Vegetarian</option>
-                            <option value="Vegan">Vegan</option>
-                            <option value="Gluten-free">Gluten-free</option>
-                            <option value="Halal">Halal</option>
-                            <option value="Other">Other</option>
-                        </select>
+                        <label for="preferences">What are your adventure preferences?</label>
+                        <input type="text" id="preferences" class="question-input" required>
                     </div>
+
                     
                     <div class="text-box question-text-box">
                         <button type="button" onclick="submitForm()" class="create-plan-button">Search Adventures</button>
                     </div>
                 </div>
-		<div class="right-column">
-			<!-- Inside your right-column div -->
-<div class="sub-rectangle sub-rectangle-1">
-    <!-- Content for the first sub-rectangle -->
-    <h2>Algonquin Provincial Park</h2>
-    <m>Whitney, Ontario.</m>
-</div>
+		<div id="location-container" class="right-column">
+            <div class="sub-rectangle sub-rectangle-1">
+                <h2>Algonquin Provincial Park</h2>
+                <m>Whitney, Ontario.</m>
+            </div>
 
-<div class="sub-rectangle sub-rectangle-2">
-    <!-- Content for the second sub-rectangle -->
-    <h2>La Push</h2>
-    <m>Washington, United States.</m>
-</div>
+            <div class="sub-rectangle sub-rectangle-2">
+                <h2>La Push</h2>
+                <m>Washington, United States.</m>
+            </div>
 
-<div class="sub-rectangle sub-rectangle-3">
-    <!-- Content for the third sub-rectangle -->
-    <h2>Silver Star Ski Resort</h2>
-    <m>Kelowna, British Columbia.</m>
-</div>
-<!-- Add more sub-rectangle divs as needed -->
- <!-- "Proceed" button -->
-    <button class="proceed-button" onclick="redirectToNewPage()">Proceed</button>
+            <div class="sub-rectangle sub-rectangle-3">
+                <h2>Silver Star Ski Resort</h2>
+                <m>Kelowna, British Columbia.</m>
+            </div>
+            <button class="proceed-button" onclick="redirectToNewPage()">Proceed</button>
         <footer>
             <!-- Your footer content here -->
         </footer>
@@ -128,9 +116,6 @@
         window.location.href = '/results';  
     }
 </script>
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=&loading=async&libraries=places&callback=initMap">
-</script>
-</body>
+    </body>
 </html>
 

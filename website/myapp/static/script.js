@@ -25,13 +25,27 @@ function submitForm() {
         body: JSON.stringify(formData),
     })
     .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-        // Handle success if needed
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-        // Handle error if needed
-    });
+    .then(locations => updateContent(locations))
+    .catch(error => console.error('Error fetching data:', error));
 }
+function updateContent(locations) {
+            var locationContainer = document.getElementById('location-container');
+            locationContainer.innerHTML = '';  // Clear existing content
+            const locList= Object.values(locations);
+            locList.forEach(function (location, index) {
+                var subRectangle = document.createElement('div');
+                subRectangle.className = 'sub-rectangle';
+                subRectangle.style.backgroundImage = 'url("' + location.image_url + '")';
+
+                var h2 = document.createElement('h2');
+                h2.textContent = location.name;
+
+                var p = document.createElement('p');
+                p.textContent = location.town_city_area;
+
+                subRectangle.appendChild(h2);
+                subRectangle.appendChild(p);
+                locationContainer.appendChild(subRectangle);
+            });
+        }
 

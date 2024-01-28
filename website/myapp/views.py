@@ -9,8 +9,8 @@ def submit_form(request):
     if request.method == 'POST':
         #data = json.loads(request.body)
         locations=apis.createLocationList(request.body)
-        print(locations)
-        return JsonResponse({'status': 'success'})
+        #locations is a python dicttionary containing info about the reccomend places to visit        
+        return JsonResponse(locations)
     return JsonResponse({'status': 'error'})
 
 def main_page(request):
