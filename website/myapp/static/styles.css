@@ -59,9 +59,11 @@ p {
 }
 
 g {
-    line-height: 1.4;
+    line-height: 1.3; /* Adjust line height as needed */
     color: #457a4a;
     font-family: 'Nunito', sans-serif;
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the font bold */
 }
 
 m {
@@ -240,3 +242,32 @@ footer {
     position: relative;
     background-color: rgba(0, 0, 0, 0.3);
 }
+.result-column {
+    float: left;
+    width: 33%;
+    background-color: rgba(255, 255, 255, 0.7);
+    flex: 0 0 calc(33% - 20px);
+    border-radius: 10px;
+    overflow-y: auto; /* Add vertical scroll if content overflows */
+    max-height: 450px; /* Set a maximum height for the right column */
+}
+
+.container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between; /* Adjust to distribute the columns evenly */
+    padding: 20px; /* Add padding for spacing on the sides */
+}
+
+.result-column {
+    float: left;
+    width: 20%; /* Adjust the width as needed */
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 450px;
+    box-sizing: border-box;
+    margin: 0 10px; /* Add margin for spacing between columns */
+}
+
