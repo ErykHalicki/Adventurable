@@ -61,11 +61,9 @@ h3 {
 }
 h4 {
     margin: 0;
-    color: #457a4a;
-    font-size: 14px; /* Adjust font size as needed */
-font-family: 'Lamarkie';
-    src: url('Lamarkie.otf') format('opentype');
-    font-weight: bold; /* Make the font bold */
+    color: #fff;
+    font-size: 28px; /* Adjust font size as needed */
+    font-family: 'Nunito', sans-serif;
 }
 p {
     line-height: 1.6;
@@ -295,9 +293,9 @@ footer {
     }
 
     .owner-photo img {
-        width: 150px; /* Set the width of the image */
+        width: 200px; /* Set the width of the image */
         height: auto; /* Maintain aspect ratio */
-        border-radius: 50%; /* Optionally, add a border-radius for a circular image */
+        border-radius: 5%; /* Optionally, add a border-radius for a rectangular image */
     }
 </style>
 
@@ -330,3 +328,188 @@ footer {
         margin-bottom: 10px; /* Adjust the bottom margin for spacing */
     }
 </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        section {
+            background-color: #f5f5f5; /* Set background color for the entire section */
+            padding: 20px; /* Add some padding for spacing */
+        }
+
+        .text-boxes {
+            display: flex;
+            justify-content: space-around; /* Distribute text-boxes evenly across the section */
+        }
+
+        .text-box {
+            background-color: #ffffff; /* Set background color for each text-box */
+            padding: 15px; /* Add padding inside each text-box */
+            border-radius: 8px; /* Add rounded corners for a better visual appearance */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+            text-align: center;
+        }
+
+        h4 {
+            margin: 0; /* Remove default margin for h4 elements */
+        }
+
+        .start-plan-button {
+            display: inline-block;
+            margin-top: 20px; /* Adjust top margin for spacing */
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+    <title>Your Page Title</title>
+</head>
+<body>
+
+<section>
+    <h3>Helping You Explore</h3>
+    <div class="text-boxes">
+        <div class="text-box">
+            <h4>Plan your next adventure in seconds</h4>
+        </div>
+        <div class="text-box">
+            <h4>Select from specifically tailored options</h4>
+        </div>
+        <div class="text-box">
+            <h4>Exploring made easier</h4>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <a href="planner" class="start-plan-button">Start Plan</a>
+    </div>
+</section>
+
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        section {
+            background-color: #f5f5f5; /* Set background color for the entire section */
+            padding: 20px; /* Add some padding for spacing */
+        }
+
+        .text-boxes {
+            display: flex;
+            justify-content: space-around; /* Distribute text-boxes evenly across the section */
+        }
+
+        .text-box {
+            background-color: #ffffff; /* Set background color for each text-box */
+            padding: 15px; /* Add padding inside each text-box */
+            border-radius: 8px; /* Add rounded corners for a better visual appearance */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+            text-align: center;
+        }
+
+        h4 {
+            margin: 0; /* Remove default margin for h4 elements */
+        }
+
+        .start-plan-button {
+            display: inline-block;
+            margin-top: 20px; /* Adjust top margin for spacing */
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+    <title>Your Page Title</title>
+</head>
+<body>
+
+<section>
+    <h3>Helping You Explore</h3>
+    <div class="text-boxes">
+        <div class="text-box">
+            <h4>Plan your next adventure in seconds</h4>
+        </div>
+        <div class="text-box">
+            <h4>Select from specifically tailored options</h4>
+        </div>
+        <div class="text-box">
+            <h4>Exploring made easier</h4>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <a href="planner" class="start-plan-button">Start Plan</a>
+    </div>
+</section>
+
+</body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        section {
+            /* Add your section styles here */
+        }
+
+        .text-box {
+            background-size: cover;
+            background-position: center;
+            height: 200px; /* Adjust the height as needed */
+            margin: 10px; /* Adjust the margin as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white; /* Text color */
+        }
+
+        .text-box:nth-child(1) {
+            background-image: url('https://garden.spoonflower.com/c/13479299/p/f/m/IpbJ6Pv5vd56v07hmLqoWEq4HRYGHu4LcmYepmAa-bbRvJ_ByJ8V/Autumn%20Rose%20solid%20dark%20sage%20green.jpg');
+        }
+
+        .text-box:nth-child(2) {
+            background-image: url('https://garden.spoonflower.com/c/13479299/p/f/m/IpbJ6Pv5vd56v07hmLqoWEq4HRYGHu4LcmYepmAa-bbRvJ_ByJ8V/Autumn%20Rose%20solid%20dark%20sage%20green.jpg');
+        }
+
+        .text-box:nth-child(3) {
+            background-image: url('https://garden.spoonflower.com/c/13479299/p/f/m/IpbJ6Pv5vd56v07hmLqoWEq4HRYGHu4LcmYepmAa-bbRvJ_ByJ8V/Autumn%20Rose%20solid%20dark%20sage%20green.jpg');
+        }
+
+        .start-plan-button {
+            /* Add your button styles here */
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h3>Helping You Explore</h3>
+        <div class="text-boxes">
+            <div class="text-box">
+                <h4>Plan your next adventure in seconds</h4>
+            </div>
+            <div class="text-box">
+                <h4>Select from specifically tailored options</h4>
+            </div>
+            <div class="text-box">
+                <h4>Exploring made easier</h4>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <a href="planner" class="start-plan-button">Start Plan</a>
+        </div>
+    </section>
+</body>
+</html>
+
+
