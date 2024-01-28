@@ -137,15 +137,15 @@ m {
         }
 
 .info-box:nth-child(1) {
-            background-image: url('https://mail.google.com/mail/u/0?ui=2&ik=f5d65dca48&attid=0.1&permmsgid=msg-a:r3912891946345654875&th=18d4f0dfae362d8d&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9v2sTufHIswv9M3YnThbZSJcInbF0oyaXqIOnP0QV1H5PExyTUsT01BxdWX_JK8BGKFIa63PPR27bo_CvQmmsyudqcKqvoZLyw7wbM3IlNx_erCEzrRWpzUdo&disp=emb&realattid=ii_lrx7bzvs0');
+            background-image: url('img1.png');
         }
 
 .info-box:nth-child(2) {
-            background-image: url('https://mail.google.com/mail/u/0?ui=2&ik=f5d65dca48&attid=0.1&permmsgid=msg-a:r-2968902079884692739&th=18d4f15590c5d539&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9YuS5h8Ga17uD55DgTHE_v3VFCk2uSqZGGTXtWjJOQOcEcuLpDUMVn_qwVnKnayU0kVkKuLgmXopTPkzU189P2X6VIJNafUmU-iWpymaQTgF3ocAXJv9G5P2s&disp=emb&realattid=ii_lrx7nlb00');
+            background-image: url('img2.png');
         }
 
 .info-box:nth-child(3) {
-            background-image: url('https://mail.google.com/mail/u/0?ui=2&ik=f5d65dca48&attid=0.3&permmsgid=msg-a:r3912891946345654875&th=18d4f0dfae362d8d&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ-3tztec44nbHrFClQZz1M4qZK42Sa9jYSvcW3heRds-BRGFXkb-4pqOftP6L8I8lLpcnC_-PiaShW27xCJvywtWd-qOntC-JVfkwsqCF_ns1JyW9vYwcdiS1Y&disp=emb&realattid=ii_lrx7d9am2');
+            background-image: url('img3.png');
         }
 .about-boxes {
     display: flex;
