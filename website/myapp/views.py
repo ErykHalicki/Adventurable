@@ -17,4 +17,5 @@ def main_page(request):
     return render(request,'index.html')
 def planner(request):
     return render(request,'planner.html')
-
+def results(request):
+    return render(request,'results.html')
