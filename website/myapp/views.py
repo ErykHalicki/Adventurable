@@ -13,6 +13,16 @@ def submit_form(request):
         return JsonResponse(locations)
     return JsonResponse({'status': 'error'})
 
+@csrf_exempt
+def info(request):
+    if request.method == 'POST':
+        response=apis.requestInfo(request.body.decode('ascii')) 
+        #locations is a python dicttionary containing info about the reccomend places to visit        
+        return JsonResponse({'result':response})
+    return JsonResponse({'status': 'error'})
+
+
+
 def main_page(request):
     return render(request,'index.html')
 def planner(request):
