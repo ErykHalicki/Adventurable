@@ -19,38 +19,65 @@
             <div class="question-columns">
                 <div class="question-column">
                     <div class="text-box question-text-box">
-                        <label for="question1">Question 1: What is your name?</label>
-                        <input type="text" id="question1" class="question-input" required>
+                        <label for="location">Where are you adventuring?</label>
+                        <input type="text" id="location" class="question-input" required>
                     </div>
                     <div class="text-box question-text-box">
-                        <label for="question2">Question 2: How old are you?</label>
-                        <input type="number" id="question2" class="question-input" required>
+                        <label for="duration">How long do you want to adventure for?</label>
+                        <select id="duration" class="question-input" required>
+                            <option value="Day trip">Day trip</option>
+                            <option value="Overnight">Overnight</option>
+                            <option value="Multiple days">Multiple days</option>
+                        </select>
                     </div>
                     <div class="text-box question-text-box">
-                        <label for="question3">Question 3: Another question?</label>
-                        <input type="text" id="question3" class="question-input" required>
+                        <label for="guided">Do you want your adventure to be guided?</label>
+                        <select id="guided" class="question-input" required>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
                     </div>
                     <div class="text-box question-text-box">
-                        <label for="question4">Question 4: Yet another question?</label>
-                        <input type="text" id="question4" class="question-input" required>
+                        <label for="budget">What is your adventure budget?</label>
+                        <select id="budget" class="question-input" required>
+                            <option value="Under $100">Under $100</option>
+                            <option value="$100 - $500">$100 - $500</option>
+                            <option value="$500 - $1000">$500 - $1000</option>
+                            <option value="Over $1000">Over $1000</option>
+                        </select>
                     </div>
                 </div>
                 <div class="question-column">
                     <div class="text-box question-text-box">
-                        <label for="question5">Question 5: Another question?</label>
-                        <input type="text" id="question5" class="question-input" required>
+                        <label for="activity">What level of physical activity are you comfortable with?</label>
+                        <select id="activity" class="question-input" required>
+                            <option value="Low (e.g., walking, easy hiking)">Low (e.g., walking, easy hiking)</option>
+                            <option value="Moderate (e.g., moderate hiking, kayaking)">Moderate (e.g., moderate hiking, kayaking)</option>
+                            <option value="High (e.g., mountain biking, rock climbing)">High (e.g., mountain biking, rock climbing)</option>
+                        </select>
                     </div>
                     <div class="text-box question-text-box">
-                        <label for="question6">Question 6: Yet another question?</label>
-                        <input type="text" id="question6" class="question-input" required>
-                    </div>
+                        <label for="accessibility">Do you have accessibility requirements?</label>
+                        <select id="accessibility" class="question-input" required onchange="showAccessibilityInput()">
+
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                        <input type="text" id="accessibilityDescription" class="question-input" style="display: none;" placeholder="Specify requirements">                    </div>
                     <div class="text-box question-text-box">
-                        <label for="question7">Question 7: Another question?</label>
-                        <input type="text" id="question7" class="question-input" required>
+                        <label for="dietRestriction">Do you have any dietary restrictions?</label>
+                        <select id="dietRestriction" class="question-input" required>
+                            <option value="None">None</option>
+                            <option value="Vegetarian">Vegetarian</option>
+                            <option value="Vegan">Vegan</option>
+                            <option value="Gluten-free">Gluten-free</option>
+                            <option value="Halal">Halal</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
+                    
                     <div class="text-box question-text-box">
-                        <label for="question8">Question 8: Yet another question?</label>
-                        <input type="text" id="question8" class="question-input" required>
+                        <button type="button" onclick="submitForm()" class="create-plan-button">Search Adventures</button>
                     </div>
                 </div>
 		<div class="right-column">
@@ -64,6 +91,18 @@
     </form>
 
     <script src="{% static 'script.js' %}"></script>
+ <script>
+        function showAccessibilityInput() {
+            var accessibilitySelect = document.getElementById("accessibility");
+            var accessibilityOtherInput = document.getElementById("accessibilityDescription");
+
+            if (accessibilitySelect.value === "Yes") {
+                accessibilityOtherInput.style.display = "block";
+            } else {
+                accessibilityOtherInput.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
 

@@ -101,7 +101,23 @@ p {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
+.create-plan-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #457a4a;
+    color: #fff;
+    font-family: 'Lamarkie', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position:relative;
+    width: 100%;
+    flex:1;
+}
+.create-plan-button:hover {
+    background-color: #356037;
+}
 .start-plan-button:hover {
     background-color: #356037;
 }

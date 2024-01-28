@@ -7,8 +7,9 @@ import json
 def submit_form(request):
     if request.method == 'POST':
         data = json.loads(request.body)
-        print(data['name'])
-        print(data['age'])
+        for d in data:
+            print(d)
+        print(data)
         return JsonResponse({'status': 'success'})
     return JsonResponse({'status': 'error'})
 
