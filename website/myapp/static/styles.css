@@ -14,6 +14,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
+    flex: 1;
 }
 
 #background {
@@ -24,7 +25,9 @@ body {
     height: 100%;
     z-index: -1;
 }
-
+a {
+    text-decoration: none;
+}
 header {
     text-align: center;
     padding: 20px;
@@ -53,10 +56,11 @@ h2 {
     align-items: center;
     font-size: 25px; /* Adjust font size as needed */
     font-weight: bold; /* Make the font bold */
+    line-height: 2; /* Adjust line height as needed */
 }
 
 h3 {
-    color#457a4a;
+    color#fff;
     align-items: center;
     font-size: 21px; /* Adjust font size as needed */
     font-weight: bold; /* Make the font bold */
@@ -151,6 +155,7 @@ m {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    width:60%;
 }
 
 .about-box {
@@ -269,18 +274,17 @@ footer {
     background-position: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
 }
-
-.sub-rectangle.sub-rectangle-1 {
-    background-image: url('https://www.backroadmapbooks.com/wp-content/uploads/2021/11/algonquin-park-1024x457.jpg'); /* Replace 'path-to-image-1.jpg' with the actual path to your first image */
+.sub-rectangle-2 {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    height=300px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
 }
 
-.sub-rectangle.sub-rectangle-2 {
-    background-image: url('https://atlas-assets.roadtrippers.com/uploads/place_image/image/11320409/-strip_-quality_60_-interlace_Plane_-resize_640x360_U__-gravity_center_-extent_640x360/place_image-image-c7414c34-b90b-474c-9e1e-a495353798cf.jpg'); /* Replace 'path-to-image-2.jpg' with the actual path to your second image */
-}
-
-.sub-rectangle.sub-rectangle-3 {
-    background-image: url('https://www.travel-british-columbia.com/wp-content/uploads/2018/05/Silver-Star-Mountain-Resort-Vernon-Photo-Destination-BC-Blake-Jorgensen.jpg'); /* Replace 'path-to-image-3.jpg' with the actual path to your third image */
-}
 .proceed-button {
     display: block;
     margin: 20px auto; /* Center the button */
@@ -316,7 +320,7 @@ footer {
 .result-column {
     float: left;
     width: 33%; /* Adjust the width as needed */
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
     /*max-height: 450px;*/
     box-sizing: border-box;
@@ -324,10 +328,11 @@ footer {
     padding: 20px; /* Add padding for spacing on the sides */
     margin: 0 10px; /* Add margin for spacing between columns */
     color:#457a4a;
-        line-height: 0.7;
+    line-height: 0.7;
 }
-.result-column g{
-
+.result-column h3{
+    color:#fff;
+    line-height: 1;
 }
     .about-box {
         text-align: center; /* Center-align the text within the about-box */
@@ -339,7 +344,7 @@ footer {
     }
 
     .owner-photo img {
-        width: 200px; /* Set the width of the image */
+        width: 400px; /* Set the width of the image */
         height: auto; /* Maintain aspect ratio */
         border-radius: 5%; /* Optionally, add a border-radius for a rectangular image */
     }
@@ -347,13 +352,13 @@ footer {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 50vh;
         }
 
         .buffering-circle {
             width: 40px;
             height: 40px;
-            border: 4px solid #3498db;
+            border: 4px solid #457a4a;
             border-top: 4px solid transparent;
             border-radius: 50%;
             animation: spin 1s linear infinite;

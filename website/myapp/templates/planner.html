@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionnaire</title>
+    <title>Planning</title>
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
@@ -12,10 +12,11 @@
 
     <form id="questionForm">
         <header>
-            <h1>2Adventure Planner2</h1>
+        <a href="/"><h1>2Adventure-Able2</h1></a>
+
         </header>
         <header>
-            <h3>Planner</h3>
+            <h2>Planner</h2>
         </header>
         <div class="container">
         <div class='questions'>
@@ -53,16 +54,16 @@
                         </select>
                     </div>
                     <div class="text-box question-text-box">
-                        <label for="accessibility">Do you have accessibility requirements?</label>
+                        <label for="accessibility">Do you have any accessibility requirements?</label>
                         <select id="accessibility" class="question-input" required onchange="showAccessibilityInput()">
 
                             <option value="No">No</option>
                             <option value="Yes">Yes</option>
                         </select>
-                        <input type="text" id="accessibilityDescription" class="question-input" style="display: none;" placeholder="Specify requirements">                    </div>
+                        <input type="text" id="accessibilityDescription" class="question-input" style="display: none;" placeholder="Share any specific accessibility needs or requirements here.">                    </div>
                     <div class="text-box question-text-box">
                         <label for="preferences">What are your adventure preferences?</label>
-                        <input type="text" id="preferences" class="question-input" placeholder="key words (ex. climbing, calm, beach, biking, etc.)">
+                        <input type="text" id="preferences" class="question-input" placeholder="ex. climbing, calm beaches, biking, sit-skiing, etc.">
                     </div>
 
                     
@@ -75,9 +76,7 @@
         <div class="buffering-circle" id="bufferingCircle"></div>
     </div>
                 </div>
-                    <footer>
-            <!-- Your footer content here -->
-        </footer>
+                   
     </form>
 
     <script src="{% static 'script.js' %}"></script>

@@ -70,7 +70,7 @@ function updateContent(locations) {
             window.location.href = 'results';  // Replace with the desired URL
             event.preventDefault();
                 });        
-    button.textContent="Proceed";
+    button.textContent="Get your plan!";
         locationContainer.appendChild(button);
 }
 function redirectToNewPage() {
@@ -97,7 +97,7 @@ async function addInfo(request,location, elementType,parent,before,useBefore){
         headers: {
             'Content-Type': 'text',
         },
-        body: "User Data to take into account: "+usr+" Request: "+request+" "+location.name+" "+location.area,
+        body: "User Data to take into account: "+usr+" Request: "+request+" "+location.name+" "+location.area
     })
     .then(response => response.json())
             
@@ -151,6 +151,11 @@ window.onload = function() {
                     
                     var z=addHeader("Activities",result_col);
                     addInfo("keep your whole answer 3 sentences MAX. Recommend the best time of year to visit for ", location, "g",result_col,z,true);
+                    var subRectangle = document.createElement('div');
+                    subRectangle.className = 'sub-rectangle';
+                    subRectangle.style.backgroundImage = 'url("' + location.image_url + '.jpg")';
+                    result_col.appendChild(subRectangle);
+addInfo("Give me a fun fact about [location], keep it EXTREMELY SHORT,  location: ", location, "h4",subRectangle,z,false);
                     var hz=addHeader("Safety / Tips",result_col);
                     addInfo("keep your whole answer 3 sentences MAX. List 1-3 must-try activities for ", location, "g",result_col,hz,true);
                     var hl=addHeader("Itinerary",result_col);
