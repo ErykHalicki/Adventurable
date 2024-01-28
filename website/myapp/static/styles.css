@@ -13,6 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #background {
@@ -45,9 +46,20 @@ section {
     align-items: center;
     justify-content: center;
 }
+.questions{
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+
+}
 
 h2 {
     color: #fff;
+    align-items: center;
 }
 
 p {
@@ -110,9 +122,26 @@ ul {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
     color: #fff;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+.question-columns {
+    display: flex;
+    justify-content: start;
+    width: 50%;
+}
+
+.question-column {
+    float: left; /* Make sure it's aligned to the left */
+    width: 50%; /* Use only half of the container's width */
+}
+
+/* Ensure that the boxes do not overflow the viewport on small screens */
+@media (max-width: 768px) {
+    .question-column {
+        width: 100%; /* On small screens, let each column take the full width */
+    }
 }

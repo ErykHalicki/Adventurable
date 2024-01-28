@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
@@ -5,20 +6,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionnaire</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
+    <img id="background" src="https://i.pinimg.com/originals/83/88/95/8388957219872c7e2cb2df11911af25d.jpg" alt="Background">
+
     <form id="questionForm">
-        <label for="question1">Question 1: What is your name?</label>
-        <input type="text" id="question1" required>
+        <header>
+            <h1>2Adventure Planner2</h1>
 
-        <label for="question2">Question 2: How old are you?</label>
-        <input type="number" id="question2" required>
+        </header>
+        <div class='questions'>
+            <div class="question-columns">
+                <div class="question-column">
+                    <div class="text-box">
+                        <label for="question1">Question 1: What is your name?</label>
+                        <input type="text" id="question1" class="start-plan-button" required>
+                    </div>
+                    <div class="text-box">
+                        <label for="question2">Question 2: How old are you?</label>
+                        <input type="number" id="question2" class="start-plan-button" required>
+                    </div>
+                    <div class="text-box">
+                        <label for="question3">Question 3: Another question?</label>
+                        <input type="text" id="question3" class="start-plan-button" required>
+                    </div>
+                    <div class="text-box">
+                        <label for="question4">Question 4: Yet another question?</label>
+                        <input type="text" id="question4" class="start-plan-button" required>
+                    </div>
+                </div>
+                <div class="question-column">
+                    <div class="text-box">
+                        <label for="question5">Question 5: Another question?</label>
+                        <input type="text" id="question5" class="start-plan-button" required>
+                    </div>
+                    <div class="text-box">
+                        <label for="question6">Question 6: Yet another question?</label>
+                        <input type="text" id="question6" class="start-plan-button" required>
+                    </div>
+                    <div class="text-box">
+                        <label for="question7">Question 7: Another question?</label>
+                        <input type="text" id="question7" class="start-plan-button" required>
+                    </div>
+                    <div class="text-box">
+                        <label for="question8">Question 8: Yet another question?</label>
+                        <input type="text" id="question8" class="start-plan-button" required>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <!-- Add more questions as needed -->
-
-        <button type="button" onclick="submitForm()">Submit</button>
+       
+        <footer>
+            <!-- Your footer content here -->
+        </footer>
     </form>
 
     <script src="{% static 'script.js' %}"></script>
 </body>
 </html>
+
