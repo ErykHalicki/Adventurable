@@ -46,15 +46,7 @@ section {
     align-items: center;
     justify-content: center;
 }
-.questions{
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
 
-}
 
 h2 {
     color: #fff;
@@ -130,13 +122,14 @@ footer {
 .question-columns {
     display: flex;
     justify-content: start;
-    width: 50%;
+    width: 100%;
 }
 
 .question-column {
     float: left; /* Make sure it's aligned to the left */
-    width: 50%; /* Use only half of the container's width */
+    width: 25%; /* Use only half of the container's width */
 }
+
 
 /* Ensure that the boxes do not overflow the viewport on small screens */
 @media (max-width: 768px) {
@@ -145,15 +138,19 @@ footer {
     }
 }
 
-/* styles.css */
-/* ... (existing styles) ... */
+.questions{
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+
+}
 
 .question-text-box {
     background-color: rgba(255, 255, 255, 0.7);
 }
-
-/* styles.css */
-/* ... (existing styles) ... */
 
 .question-input {
     width: 100%; /* Make input fields fill the width of their container */
@@ -164,18 +161,11 @@ footer {
     border: 1px solid #ccc; /* Add a border for clarity */
     border-radius: 5px; /* Add rounded corners */
 }
-.right-box {
-    flex: 0 0 calc(50% - 20px); /* Adjust the width as needed */
-    margin: 10px; /* Add margin to create space between the right box and questions */
-    padding: 20px; /* Increase padding for a larger box */
-    background-color: rgba(255, 255, 255, 0.7); /* Mostly clear white background */
-    border-radius: 10px; /* Adjust the border-radius for rounded corners */
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-    color: #333; /* Text color inside the right box */
+.right-column {
+    float: left; /* Make sure it's aligned to the left */
     width: 50%; /* Use only half of the container's width */
-    transform: translateX(100%);
-    top: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+	flex: 0 0 calc(50% - 20px); /* Adjust the width as needed (33.33% for three boxes) */
 }
 .container {
     position: relative;
