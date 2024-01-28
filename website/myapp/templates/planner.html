@@ -23,7 +23,7 @@
                 <div class="question-column">
                     <div class="text-box question-text-box">
                         <label for="location">Where are you adventuring?</label>
-                        <input type="text" id="location" class="question-input" required>
+                        <input type="text" id="location" class="question-input" required placeholder="general area (ex. China, BC, South Sweden)">
                     </div>
                     <div class="text-box question-text-box">
                         <label for="duration">How long do you want to adventure for?</label>
@@ -69,53 +69,21 @@
                         <input type="text" id="accessibilityDescription" class="question-input" style="display: none;" placeholder="Specify requirements">                    </div>
                     <div class="text-box question-text-box">
                         <label for="preferences">What are your adventure preferences?</label>
-                        <input type="text" id="preferences" class="question-input" required>
+                        <input type="text" id="preferences" class="question-input" placeholder="key words (ex. climbing, calm, beach, biking, etc.)">
                     </div>
 
                     
                     <div class="text-box question-text-box">
-                        <button type="button" onclick="submitForm()" class="create-plan-button">Search Adventures</button>
+                        <button id="submitButton" type="button" onclick="submitForm()" class="create-plan-button">Search Adventures</button>
                     </div>
                 </div>
 		<div id="location-container" class="right-column">
-            <div class="sub-rectangle sub-rectangle-1">
-                <h2>Algonquin Provincial Park</h2>
-                <m>Whitney, Ontario.</m>
-            </div>
-
-            <div class="sub-rectangle sub-rectangle-2">
-                <h2>La Push</h2>
-                <m>Washington, United States.</m>
-            </div>
-
-            <div class="sub-rectangle sub-rectangle-3">
-                <h2>Silver Star Ski Resort</h2>
-                <m>Kelowna, British Columbia.</m>
-            </div>
-            <button class="proceed-button" onclick="redirectToNewPage()">Proceed</button>
-        <footer>
+                    <footer>
             <!-- Your footer content here -->
         </footer>
     </form>
 
     <script src="{% static 'script.js' %}"></script>
- <script>
-        function showAccessibilityInput() {
-            var accessibilitySelect = document.getElementById("accessibility");
-            var accessibilityOtherInput = document.getElementById("accessibilityDescription");
-
-            if (accessibilitySelect.value === "Yes") {
-                accessibilityOtherInput.style.display = "block";
-            } else {
-                accessibilityOtherInput.style.display = "none";
-            }
-        }
-    </script>
-<script>
-    function redirectToNewPage() {
-        window.location.href = '/results';  
-    }
-</script>
     </body>
 </html>
 
