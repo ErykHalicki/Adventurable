@@ -3,6 +3,7 @@ import googlemaps
 import pathlib
 from openai import OpenAI
 import re
+import subprocess
 
 jsonFile=open("../keys.json","r")
 dataJson = json.load(jsonFile)
@@ -11,7 +12,7 @@ gptClient = OpenAI()
 mapsClient = googlemaps.Client(dataJson["google"])
 photoDir="myapp/static/photos/"
 
-prompt1="You are a website designed to help users find incredibly fun adventures. When data is given to you, you recommend locations someone could visit, taking into account all the restrictions given, while trying to make sure the adventure is as fun as possible. Output only the names of the locations, in json format. in the json format you will also include the 'area' that the location is in. Here is your data: "
+prompt1="You are a website designed to help users find incredibly fun adventures. When data is given to you, you recommend locations someone could visit, taking into account all the restrictions given, while trying to make sure the adventure is as fun as possible. Output only the names of the locations, in json format. in the json format you will also include the 'area' that the location is in, this shouldnt be the area that the user provided, but rather a more specific/local description; for example if the returned location was La Push beach, the area would be Quileute Indian Reservation, Washngton, USA. Here is your data: "
 
 def getGoogleLocation(location):
     result= mapsClient.find_place(input=location, input_type="textquery", fields=["name","place_id","photos"] )["candidates"][0]
@@ -45,7 +46,7 @@ def createLocationList(request):
     gptResponse=requestGPT4(request)
     json_match = re.search(r'\[.*\]', gptResponse, re.DOTALL)
     if json_match:
-        json_data = json_match.group(0)
+        json_data = json.loads(json_match.group(0))
         
         for location in json_data:
             googleResponse=getGoogleLocation(location["name"])

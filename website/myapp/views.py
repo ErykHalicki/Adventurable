@@ -8,7 +8,8 @@ from . import apis
 def submit_form(request):
     if request.method == 'POST':
         #data = json.loads(request.body)
-        apis.createLocationList(request.body)
+        locations=apis.createLocationList(request.body)
+        print(locations)
         return JsonResponse({'status': 'success'})
     return JsonResponse({'status': 'error'})
 
