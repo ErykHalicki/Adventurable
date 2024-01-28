@@ -31,8 +31,9 @@ function submitForm() {
 function updateContent(locations) {
             var locationContainer = document.getElementById('location-container');
             locationContainer.innerHTML = '';  // Clear existing content
-            const locList= Object.values(locations);
-            locList.forEach(function (location, index) {
+            let temp=JSON.stringify(locations)
+            const locList= JSON.parse(temp)
+            locations.forEach(function (location, index) {
                 var subRectangle = document.createElement('div');
                 subRectangle.className = 'sub-rectangle';
                 subRectangle.style.backgroundImage = 'url("' + location.image_url + '")';
