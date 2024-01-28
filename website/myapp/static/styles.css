@@ -58,6 +58,17 @@ p {
     color: #457a4a;
 }
 
+g {
+    line-height: 1.4;
+    color: #457a4a;
+    font-family: 'Nunito', sans-serif;
+}
+
+m {
+    line-height: 1.6;
+    color: #fff;
+}
+
 .text-boxes {
     display: flex;
     justify-content: space-around;
@@ -159,13 +170,37 @@ footer {
     margin-top: 5px; /* Add margin between input fields */
     background-color: rgba(255, 255, 255, 0.7); /* Light white background */
     border: 1px solid #ccc; /* Add a border for clarity */
-    border-radius: 5px; /* Add rounded corners */
+    border-radius: 10px; /* Add rounded corners */
 }
 .right-column {
-    float: left; /* Make sure it's aligned to the left */
-    width: 50%; /* Use only half of the container's width */
+    float: left;
+    width: 50%;
     background-color: rgba(255, 255, 255, 0.7);
-	flex: 0 0 calc(50% - 20px); /* Adjust the width as needed (33.33% for three boxes) */
+    flex: 0 0 calc(50% - 20px);
+    border-radius: 10px;
+    overflow-y: auto; /* Add vertical scroll if content overflows */
+    max-height: 450px; /* Set a maximum height for the right column */
+}
+.sub-rectangle {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
+}
+
+.sub-rectangle.sub-rectangle-1 {
+    background-image: url('https://www.backroadmapbooks.com/wp-content/uploads/2021/11/algonquin-park-1024x457.jpg'); /* Replace 'path-to-image-1.jpg' with the actual path to your first image */
+}
+
+.sub-rectangle.sub-rectangle-2 {
+    background-image: url('https://atlas-assets.roadtrippers.com/uploads/place_image/image/11320409/-strip_-quality_60_-interlace_Plane_-resize_640x360_U__-gravity_center_-extent_640x360/place_image-image-c7414c34-b90b-474c-9e1e-a495353798cf.jpg'); /* Replace 'path-to-image-2.jpg' with the actual path to your second image */
+}
+
+.sub-rectangle.sub-rectangle-3 {
+    background-image: url('https://www.travel-british-columbia.com/wp-content/uploads/2018/05/Silver-Star-Mountain-Resort-Vernon-Photo-Destination-BC-Blake-Jorgensen.jpg'); /* Replace 'path-to-image-3.jpg' with the actual path to your third image */
 }
 .container {
     position: relative;
