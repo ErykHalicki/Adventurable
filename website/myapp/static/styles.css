@@ -51,6 +51,8 @@ section {
 h2 {
     color: #fff;
     align-items: center;
+    font-size: 25px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the font bold */
 }
 
 h3 {
@@ -82,8 +84,9 @@ g {
 z {
     line-height: 1.3; /* Adjust line height as needed */
     color: #fff;
-    font-family: 'Nunito', sans-serif;
-    font-size: 28px; /* Adjust font size as needed */
+    font-family: 'Lamarkie';
+    src: url('Lamarkie.otf') format('opentype');
+    font-size: 20px; /* Adjust font size as needed */
     font-weight: bold; /* Make the font bold */
 }
 
@@ -134,15 +137,15 @@ m {
         }
 
 .info-box:nth-child(1) {
-            background-image: url('https://garden.spoonflower.com/c/13479299/p/f/m/IpbJ6Pv5vd56v07hmLqoWEq4HRYGHu4LcmYepmAa-bbRvJ_ByJ8V/Autumn%20Rose%20solid%20dark%20sage%20green.jpg');
+            background-image: url('https://mail.google.com/mail/u/0?ui=2&ik=f5d65dca48&attid=0.1&permmsgid=msg-a:r3912891946345654875&th=18d4f0dfae362d8d&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9v2sTufHIswv9M3YnThbZSJcInbF0oyaXqIOnP0QV1H5PExyTUsT01BxdWX_JK8BGKFIa63PPR27bo_CvQmmsyudqcKqvoZLyw7wbM3IlNx_erCEzrRWpzUdo&disp=emb&realattid=ii_lrx7bzvs0');
         }
 
 .info-box:nth-child(2) {
-            background-image: url('https://garden.spoonflower.com/c/13479299/p/f/m/IpbJ6Pv5vd56v07hmLqoWEq4HRYGHu4LcmYepmAa-bbRvJ_ByJ8V/Autumn%20Rose%20solid%20dark%20sage%20green.jpg');
+            background-image: url('https://mail.google.com/mail/u/0?ui=2&ik=f5d65dca48&attid=0.1&permmsgid=msg-a:r-2968902079884692739&th=18d4f15590c5d539&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9YuS5h8Ga17uD55DgTHE_v3VFCk2uSqZGGTXtWjJOQOcEcuLpDUMVn_qwVnKnayU0kVkKuLgmXopTPkzU189P2X6VIJNafUmU-iWpymaQTgF3ocAXJv9G5P2s&disp=emb&realattid=ii_lrx7nlb00');
         }
 
 .info-box:nth-child(3) {
-            background-image: url('https://garden.spoonflower.com/c/13479299/p/f/m/IpbJ6Pv5vd56v07hmLqoWEq4HRYGHu4LcmYepmAa-bbRvJ_ByJ8V/Autumn%20Rose%20solid%20dark%20sage%20green.jpg');
+            background-image: url('https://mail.google.com/mail/u/0?ui=2&ik=f5d65dca48&attid=0.3&permmsgid=msg-a:r3912891946345654875&th=18d4f0dfae362d8d&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ-3tztec44nbHrFClQZz1M4qZK42Sa9jYSvcW3heRds-BRGFXkb-4pqOftP6L8I8lLpcnC_-PiaShW27xCJvywtWd-qOntC-JVfkwsqCF_ns1JyW9vYwcdiS1Y&disp=emb&realattid=ii_lrx7d9am2');
         }
 .about-boxes {
     display: flex;

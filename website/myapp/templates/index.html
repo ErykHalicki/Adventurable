@@ -18,37 +18,48 @@
         <h1>2Adventure Planner2</h1>
     </header>
 
-    <section>
-        <h3>Helping You Explore</h3>
-        <div class="info-boxes">
-            <div class="info-box">
-                <z>Plan and make your next adventure a reality in seconds</z>
-            </div>
-            <div class="info-box">
-                <z>Select  from  specifically  tailored  travel options</z>
-            </div>
-            <div class="info-box">
-                <z>Exploring made easier with  Adventure Planner</z>
-            </div>
+<style>
+    .info-boxes z {
+        word-spacing: 8px; /* Adjust the word spacing as needed */
+        color: #ffffff; /* Set the text color to white or any other color that contrasts well with your background */
+        background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background color */
+        padding: 10px; /* Add padding for better visibility */
+        line-height: 2.0; /* Adjust the line-height to create more space between lines */
+    }
+</style>
+
+<section>
+    <h3>Helping You Explore</h3>
+    <div class="info-boxes">
+        <div class="info-box">
+            <z>Plan and make your next adventure a reality in seconds</z>
         </div>
-        <div style="text-align: center;">
-            <a href="planner" class="start-plan-button">Start Plan</a>
+        <div class="info-box">
+            <z>Select  from  specifically  tailored  travel options</z>
         </div>
-    </section>
+        <div class="info-box">
+            <z>Exploring made easier with  A.I technology</z>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <a href="planner" class="start-plan-button">Start Plan</a>
+    </div>
+</section>
+
   <section>
 
     <h2>About Us</h2>
     <div class="about-boxes">
         <div class="about-box">
-            <p>Hey! I'm Amanda, a first-year UBCO microbiology student teaming up with Eryk to learn more about programming, develop new skills, and bring a fun artistic touch to our project!</p>
+            <p>Hey! I'm Amanda, a first-year UBCO microbiology student teaming up with Eryk to learn more about programming, develop new skills, and bring a fun artistic touch to our project! </p>
             <div class="owner-photo">
                 <img src={% static 'mandi.jpeg' %}>
             </div>
         </div>
         <div class="about-box">
-            <p>WUz up my name is silent fart! I like anime OHIO ARA ARA MIKASA SEMIMASEI!!!! 哪哇记得一位诶课到我I活动I安慰离开电脑卡忘了你带哦我你都爱我你都爱我滴own奥丁我in懂啊</p>
+            <p>Hello! I'm Eryk a first year double majoring in computer science and psychology at UBCO.</p>
             <div class="owner-photo">
-                <img src={% static 'fart.jpeg' %}>
+                <img src={% static 'eryk.jpeg' %}>
             </div>
         </div>
     </div>
