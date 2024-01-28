@@ -11,6 +11,7 @@ gptClient = OpenAI()
 
 mapsClient = googlemaps.Client(dataJson["google"])
 photoDir="myapp/static/photos/"
+photoDirShort="/static/photos/"
 
 prompt1="You are a website designed to help users find incredibly fun adventures. When data is given to you, you recommend locations someone could visit, taking into account all the restrictions given, while trying to make sure the adventure is as fun as possible. Output only the names of the locations, in json format. in the json format you will also include the 'area' that the location is in, this shouldnt be the area that the user provided, but rather a more specific/local description; for example if the returned location was La Push beach, the area would be Quileute Indian Reservation, Washngton, USA. Here is your data: "
 
@@ -52,9 +53,8 @@ def createLocationList(request):
             locations[googleResponse["place_id"]]={
                                                     "name":googleResponse["name"],
                                                     "area":location["area"],
-                                                    "image_url":photoDir+googleResponse["place_id"]
+                                                    "image_url":photoDirShort+googleResponse["place_id"]
                                                     }
     else:
         print("No JSON data found.")
-    print("returned all locations")
     return locations

@@ -31,22 +31,27 @@ function submitForm() {
 function updateContent(locations) {
             var locationContainer = document.getElementById('location-container');
             locationContainer.innerHTML = '';  // Clear existing content
-            let temp=JSON.stringify(locations)
-            const locList= JSON.parse(temp)
-            locations.forEach(function (location, index) {
+    console.log(locations);
+            for (let id in locations) {
+                if (locations.hasOwnProperty(id)) {
+                    const location = locations[id];
                 var subRectangle = document.createElement('div');
                 subRectangle.className = 'sub-rectangle';
-                subRectangle.style.backgroundImage = 'url("' + location.image_url + '")';
+                subRectangle.style.backgroundImage = 'url("' + location.image_url + '.jpg")';
 
+                console.log("changed image!");
                 var h2 = document.createElement('h2');
                 h2.textContent = location.name;
 
-                var p = document.createElement('p');
-                p.textContent = location.town_city_area;
+                var m = document.createElement('m');
+                m.textContent = location.area;
 
                 subRectangle.appendChild(h2);
-                subRectangle.appendChild(p);
+                subRectangle.appendChild(m);
                 locationContainer.appendChild(subRectangle);
-            });
-        }
+
+            }
+            }
+                            
+}
 
