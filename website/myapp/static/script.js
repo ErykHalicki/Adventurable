@@ -80,61 +80,53 @@ function showAccessibilityInput() {
             }
         }
 
-
-
+async function addInfo(request,location, elementType,parent,before){
+    fetch('/info/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'text',
+        },
+        body: request+" "+location.name+" "+location.area,
+    })
+    .then(response => response.json())
+            
+    .then(result => {
+        var elem=document.createElement(elementType);
+        elem.textContent=result.result;
+        if(before==true){
+            parent.insertBefore(elem, parent.FirstChild);
+        }
+        else {
+        parent.insertBefore(elem, parent.LastChild.nextSibling);
+    }
+    })
+}
 window.onload = function() {
     if(window.location.href.includes("results")){
         const locations = JSON.parse(sessionStorage.getItem('locations'));
         console.log("got data!");
         var locationContainer = document.getElementById('location-container');
-        locationContainer.innerHTML = '';  // Clear existing content
-
-        // Create an array to hold all the promises
-
-        for (let id in locations) {
-            let i=0;
-            if (locations.hasOwnProperty(id)) {
-                var location = locations[id];
-                var result_col = document.createElement('div');
-                var subRectangle = document.createElement('div');
-                subRectangle.className = 'sub-rectangle';
-                subRectangle.style.backgroundImage = 'url("' + location.image_url + '.jpg")';
-
-                console.log("changed image!");
-                var h2 = document.createElement('h2');
-                h2.textContent = location.name;
-
-                var m = document.createElement('m');
-                m.textContent = location.area;
-
-                subRectangle.appendChild(h2);
-                subRectangle.appendChild(m);
-                result_col.appendChild(subRectangle);
-
-                // Create a fetch promise and add it to the array
-                var fetchPromise = fetch('/info/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'text',
-                    },
-                    body: location.name + " " + location.area,
-                })
-                .then(response => response.json())
-                .then(result => {
-                    console.log(result.result);
-
-                var g = document.createElement('g');
-                    g.textContent = result.result;
-                    result_col.appendChild(g);
-                })
-                .catch(error => console.error('Error fetching data:', error));
-
-
-                locationContainer.appendChild(result_col);
+            locationContainer.innerHTML = '';  // Clear existing content
+            for (let id in locations) {
+                if (locations.hasOwnProperty(id)) {
+                    const location = locations[id];
+                    var result_col=document.createElement('div');
+                    result_col.className="result-column";
+                    var subRectangle = document.createElement('div');
+                    subRectangle.className = 'sub-rectangle';
+                    subRectangle.style.backgroundImage = 'url("' + location.image_url + '.jpg")';
+                    var h2 = document.createElement('h2');
+                    h2.textContent = location.name;
+                    var m = document.createElement('m');
+                    m.textContent = location.area;
+                    subRectangle.appendChild(h2);
+                    subRectangle.appendChild(m);
+                    result_col.appendChild(subRectangle);
+                    locationContainer.appendChild(result_col);
+                    addInfo(" describe in 3 words, ", location, "h1",result_col);
+                    addInfo(" describe in 2 sentences, ", location, "g",result_col);
+                    /*result_col.appendChild(h2);*/
             }
         }
     }
-
-        // Wait for all fetch promises to resolve before continuing
 };
-
