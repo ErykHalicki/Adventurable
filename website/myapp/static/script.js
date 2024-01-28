@@ -1,8 +1,9 @@
 
 function submitForm() {
     // Collect all input values dynamically
-    var locationContainer = document.getElementById('location-container');
-            locationContainer.innerHTML = '';  // Clear existing content
+    //var locationContainer = document.getElementById('location-container');
+      //      locationContainer.innerHTML = '';  // Clear existing content
+    startBuffering();
 
     var formData = {};
     var inputs = document.querySelectorAll('input, select');
@@ -39,6 +40,7 @@ function submitForm() {
 var locationsToSend;
 
 function updateContent(locations) {
+            stopBuffering();
             var locationContainer = document.getElementById('location-container');
             locationContainer.innerHTML = '';  // Clear existing content
             locationsToSend=locations;
@@ -118,6 +120,7 @@ function addHeader(request,parent){
     return h3;
 }
 window.onload = function() {
+    
     if(window.location.href.includes("results")){
         const locations = JSON.parse(sessionStorage.getItem('locations'));
         usr = sessionStorage.getItem('user');
@@ -163,4 +166,16 @@ window.onload = function() {
 
         }
     }
+    else{
+        stopBuffering();
+    }
 };
+function startBuffering() {
+            var bufferingCircle = document.getElementById('bufferingCircle');
+            bufferingCircle.classList.remove('buffering-hide');
+        }
+
+        function stopBuffering() {
+            var bufferingCircle = document.getElementById('bufferingCircle');
+            bufferingCircle.classList.add('buffering-hide');
+        }

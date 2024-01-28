@@ -33,14 +33,7 @@
                             <option value="Multiple days">Multiple days</option>
                         </select>
                     </div>
-                    <div class="text-box question-text-box">
-                        <label for="guided">Do you want your adventure to be guided?</label>
-                        <select id="guided" class="question-input" required>
-                            <option value="No">No</option>
-                            <option value="Yes">Yes</option>
-                        </select>
-                    </div>
-                    <div class="text-box question-text-box">
+                                        <div class="text-box question-text-box">
                         <label for="budget">What is your adventure budget?</label>
                         <select id="budget" class="question-input" required>
                             <option value="Under $100">Under $100</option>
@@ -77,7 +70,11 @@
                         <button id="submitButton" type="button" onclick="submitForm()" class="create-plan-button">Search Adventures</button>
                     </div>
                 </div>
-		<div id="location-container" class="right-column">
+                <div id="location-container" class="right-column">
+<div class="buffering-container" id="bufferingContainer">
+        <div class="buffering-circle" id="bufferingCircle"></div>
+    </div>
+                </div>
                     <footer>
             <!-- Your footer content here -->
         </footer>
