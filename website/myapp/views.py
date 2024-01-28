@@ -3,8 +3,10 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 import googlemaps
+jsonFile=open("../keys.json","r")
+dataJson = json.load(jsonFile)
 
-mapsClient = googlemaps.Client("AIzaSyAJJ_vstzJNHUQtkYZYRvZqyBt-x0sqM8A")
+mapsClient = googlemaps.Client(dataJson["google"])
 
 def getGoogleLocation(location):
     result= mapsClient.find_place(input=location, input_type="textquery", fields=["name","place_id","photos"] )["candidates"][0]
